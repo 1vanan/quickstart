@@ -4,7 +4,7 @@ import java.util.Properties;
 import java.util.logging.*;
 
 /** */
-class Application {
+public class Application {
     /** */
     private static final Logger LOG = Logger.getLogger(Application.class.getName());
 
@@ -12,12 +12,12 @@ class Application {
     private final Properties props;
 
     /** Getting config into properties is expected to be done outside, for example as in {@link Main#main(String[])} */
-    Application(Properties props) {
+    public Application(Properties props) {
         this.props = props;
     }
 
     /** */
-    void launch() {
+    public void launch() {
         final String key = "message";
 
         LOG.log(Level.INFO, "start application");

@@ -34,7 +34,7 @@ public class Main {
     }
 
     /** */
-    Properties configure(String... propsToVerify) throws IOException {
+    public Properties configure(String... propsToVerify) throws IOException {
         LOG.info("checking command line arguments");
 
         if (clazz == null || args == null || args.length != 1) {
