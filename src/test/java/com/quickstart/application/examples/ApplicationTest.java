@@ -6,6 +6,8 @@ import java.io.InputStream;
 import java.util.Properties;
 import java.util.logging.*;
 import org.junit.Test;
+
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -17,14 +19,6 @@ public class ApplicationTest {
 
     /** */
     private static final String PROPS_FILE_NAME = "app.test.properties";
-
-    /** */
-    @Test
-    public void testNullProperties() {
-        LOG.info("test null properties");
-
-        new Application(null).launch();
-    }
 
     /** */
     @Test
@@ -49,7 +43,17 @@ public class ApplicationTest {
     public void testBasicUsage() throws Exception {
         LOG.info("test basic usage");
 
-        new Application(properties(PROPS_FILE_NAME)).launch();
+        boolean fail = false;
+
+        try {
+            new Application(properties(PROPS_FILE_NAME)).launch();
+        }
+        catch (Exception e){
+            fail = true;
+        }
+
+        // nothing fails!
+        assertFalse(fail);
     }
 
     /** */
