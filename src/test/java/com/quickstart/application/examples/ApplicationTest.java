@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 import java.util.logging.*;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -20,7 +20,7 @@ public class ApplicationTest {
 
     /** */
     @Test
-    public void testNullProperties() throws Exception {
+    public void testNullProperties() {
         LOG.info("test null properties");
 
         new Application(null).launch();

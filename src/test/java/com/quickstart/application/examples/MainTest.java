@@ -2,7 +2,7 @@ package com.quickstart.application.examples;
 
 import com.quickstart.application.Application;
 import com.quickstart.application.Main;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.io.IOException;
 
